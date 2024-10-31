@@ -18,11 +18,11 @@ public class Exercise8 {
 		distance = keyboard.nextDouble();
 		System.out.println("Inserte el número de días de estancia: ");
 		day = keyboard.nextInt();
-		if (distance > 1000.0 && day > 7) {
-			price = (distance * 0.35) - (distance * 0.35 * 0.3);
+		if (distance * 2 > 1000.0 && day >= 7) {
+			price = ((distance) * 2 * 0.35) - ((distance) * 2 * 0.35 * 0.3);
 			System.out.println("El precio total es: " + price);
 		} else {
-			price = distance * 0.35;
+			price = (distance) * 2 * 0.35;
 			System.out.println("El precio total es: " + price);
 		}
 	}
