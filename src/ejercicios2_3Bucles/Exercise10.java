@@ -20,14 +20,14 @@ public class Exercise10 {
 			num2 = keyboard.nextInt();
 			if (num1 < 0 || num2 < 0) {
 				System.out.println("Número no válido");
-			} else if (num1 > 0 && num2 > 0) {
+			} else if (num1 >= 0 || num2 >= 0) {
 				for (int i = 1; (!(num1 >= num1 * num2)) && i < num2; num1 += num3, i++) {
 					System.out.printf("Sumando números...\n");
 
 				}
 				System.out.printf("El resultado es %d\n", num1);
 			}
-		} while (!(num1 < 0 && num2 < 0));
+		} while (!(num1 < 0 || num2 < 0));
 	}
 
 }

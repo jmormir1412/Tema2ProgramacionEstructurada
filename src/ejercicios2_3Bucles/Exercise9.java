@@ -19,9 +19,9 @@ public class Exercise9 {
 			num = keyboard.nextInt();
 			notExit = num >= 0 && num <= 10;
 			if (num >= 0 && num <= 10) {
-				System.out.printf("La tabla de multiplicar del %d es:\n ", num);
+				System.out.printf("\nLa tabla de multiplicar del %d es:\n", num);
 				for (int i = 0; i <= 10; i++) {
-					System.out.printf("%d x %d  = %d\n", num, i, num * i);
+					System.out.printf("%d x %2d  = %-2d\n", num, i, num * i);
 				}
 			}
 		} while (notExit);
