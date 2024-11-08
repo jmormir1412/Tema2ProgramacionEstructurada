@@ -11,14 +11,20 @@ public class Exercise13 {
 	@SuppressWarnings("resource")
 	public void show() {
 		Scanner keyboard = new Scanner(System.in);
-		Integer num, i = 3;
+		final int CODE = 1412;
+		int num, i = 3;
 		do {
 			System.out.println("Introduzca el PIN: ");
 			num = keyboard.nextInt();
 			i--;
-			if ((num != 1412) && i > 0)
-				System.out.printf("Se ha equivocado, le quedan %d intentos\n", i);
-		} while ((num != 1412) && i > 0);
+			if ((num != CODE) && i > 0) {
+				System.out.printf("Se ha equivocado, le quedan %d %s\n", i, (i == 1) ? "intento" : "intentos");
+			} else if (num == CODE) {
+				System.out.printf("La contraseña es correcta");
+			} else if (num != CODE && i == 0) {
+				System.out.printf("Bloqueado");
+			}
+		} while ((num != CODE) && i > 0);
 	}
 
 }

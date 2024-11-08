@@ -11,7 +11,7 @@ public class Exercise14 {
 	@SuppressWarnings("resource")
 	public void show() {
 		Scanner keyboard = new Scanner(System.in);
-		Integer code, num, num1;
+		int code, num, num1;
 		do {
 			System.out.println("Inserte el menú deseado: 1.Suma 2.Resta 3.Salir. Si desea salir, pulse 3. ");
 			code = keyboard.nextInt();
@@ -29,8 +29,9 @@ public class Exercise14 {
 				num1 = keyboard.nextInt();
 				num -= num1;
 				System.out.printf("La resta de los números es %d\n", num);
-			} else if (code == 3)
+			} else if (code == 3) {
 				System.out.println("Finalizado");
+			}
 		} while (code != 3);
 
 	}
