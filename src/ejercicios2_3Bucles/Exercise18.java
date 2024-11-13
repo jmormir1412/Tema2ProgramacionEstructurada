@@ -8,16 +8,16 @@ public class Exercise18 {
 		new Exercise18().show();
 	}
 
-	public void show() {
-		pyramid();
-	}
-
 	@SuppressWarnings("resource")
-	public void pyramid() {
+	public void show() {
 		Scanner keyboard = new Scanner(System.in);
 		int n;
 		System.out.println("Introduce un número de líneas: ");
 		n = keyboard.nextInt();
+		pyramid(n);
+	}
+
+	public void pyramid(int n) {
 		for (int line = 1; line <= n; line++) {
 			System.out.println("");
 			for (int space = 1; space <= n - line; space++) {

@@ -8,16 +8,16 @@ public class Exercise19 {
 		new Exercise19().show();
 	}
 
-	public void show() {
-		diamond();
-	}
-
 	@SuppressWarnings("resource")
-	public void diamond() {
+	public void show() {
 		Scanner keyboard = new Scanner(System.in);
 		int n;
 		System.out.println("Introduce un número de líneas: ");
 		n = keyboard.nextInt();
+		diamond(n);
+	}
+
+	public void diamond(int n) {
 		for (int line = 1; line <= n; line++) {
 			System.out.println("");
 			for (int space = 1; space <= n - line; space++) {

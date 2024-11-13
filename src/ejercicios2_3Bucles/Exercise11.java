@@ -11,21 +11,33 @@ public class Exercise11 {
 	@SuppressWarnings("resource")
 	public void show() {
 		Scanner keyboard = new Scanner(System.in);
-		Integer num1, num2, i, sumPar = 0, sumImpar = 0;
+		int num1, num2, sumPar = 0, sumImpar = 0;
 		do {
 			System.out.println("Introduce un número entero: ");
 			num1 = keyboard.nextInt();
 			System.out.println("Introduce un número entero: ");
 			num2 = keyboard.nextInt();
 		} while (num1 >= num2);
-		for (i = num1; i <= num2; i++) {
+		System.out.printf("Suma de pares : %d\nSuma de impares: %d", sumPar(num1, num2, sumPar),
+				sumImpar(num1, num2, sumImpar));
+	}
+
+	public int sumPar(int num1, int num2, int sumPar) {
+		for (int i = num1; i <= num2; i++) {
 			if (i % 2 == 0) {
 				sumPar += i;
-			} else {
+			}
+		}
+
+		return sumPar;
+	}
+
+	public int sumImpar(int num1, int num2, int sumImpar) {
+		for (int i = num1; i <= num2; i++) {
+			if (i % 2 != 0) {
 				sumImpar += i;
 			}
-
 		}
-		System.out.printf("Suma de pares : %d\nSuma de impares: %d", sumPar, sumImpar);
+		return sumImpar;
 	}
 }
