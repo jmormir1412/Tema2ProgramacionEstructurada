@@ -21,11 +21,11 @@ public class Exercise20 {
 		for (int line = 1; line <= n; line++) {
 			System.out.println("");
 			for (int space = 1; space <= n - line; space++) {
-				System.out.print(" ");
+				System.out.print("  ");
 
 			}
 			for (int block = 1; block <= line; block++) {
-				System.out.printf("%d ", block);
+				System.out.printf(" %d  ", block);
 			}
 		}
 	}
